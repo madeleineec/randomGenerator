@@ -19,20 +19,23 @@ html, body {
 	flex: 1;
 }
 
+.box {
+	transition: all 1s;
+}
 
-.box1 {
+#box1 {
 	background-color: #d4d4d4;
 }
 
-.box2 {
+#box2 {
 	background-color: #b4b4b4;
 }
 
-.box3 {
+#box3 {
 	background-color: #909090;
 }
 
-.box4 {
+#box4 {
 	background-color: #636363;
 }
 
@@ -50,4 +53,9 @@ html, body {
 #textOutputContainer {
 	margin-left:1.6em;
 	margin-top:1em;
+}
+
+#outputText {
+	margin-top:1em;
+	transition:transform 1s ease, font-size .5s ease;
 }

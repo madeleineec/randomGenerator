@@ -6,11 +6,15 @@ var descriptions = ["super snazzy", "ugly", "gorgeous", "fun", "much improved", 
 
 executeButton.addEventListener("click", function(){
 	var currentInputText = inputElement.value;
-	restyle();
+	palette();
 	generate(currentInputText);
 });
 
-function restyle() {
+outputParagraph.addEventListener("mouseover",function(){
+	restyle(outputParagraph);
+});
+
+function palette() {
 	var box1 = document.getElementById('box1');
 	var box2 = document.getElementById('box2');
 	var box3 = document.getElementById('box3');
@@ -39,5 +43,12 @@ function generate(userInput) {
 	var randomIndex = Math.floor(Math.random()* descriptions.length);
 	console.log(randomIndex);
 	var selectedDescription = descriptions[randomIndex];
-	outputParagraph.innerText = "Hope you like your " + selectedDescription + " color palette, " + userInput + "!";
+	outputParagraph.innerHTML = "Hope you like your " + selectedDescription + " color palette, " + userInput + "!";
+}
+
+function restyle(message){
+	let randRotation = ((Math.random()*10)-5)+"deg";
+	let randFontSize = (Math.floor(Math.random()*(30-8+1))+8)+"px";
+	message.style.transform="rotate("+randRotation+")";
+	message.style.fontSize=randFontSize;
 }
