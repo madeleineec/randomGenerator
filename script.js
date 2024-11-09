@@ -43,7 +43,7 @@ function generate(userInput) {
 	var randomIndex = Math.floor(Math.random()* descriptions.length);
 	console.log(randomIndex);
 	var selectedDescription = descriptions[randomIndex];
-	outputParagraph.innerHTML = "Hope you like your " + selectedDescription + " color palette, " + userInput + "!";
+	outputParagraph.innerHTML = "Hope you like your " + selectedDescription + " color palette, " + userInput + "! (If you don't, generate another!)";
 }
 
 function restyle(message){
